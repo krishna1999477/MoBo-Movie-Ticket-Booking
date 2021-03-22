@@ -1,0 +1,148 @@
+City Controller---------
+
+PostMethod
+http://localhost:8082/setcity > Setcity
+	{
+        "zipcode": 110096,
+        "cityname": "Noida",
+        "state": " Uttar Pradesh "
+    }
+	
+Movie Controller---------
+PostMethod
+http://localhost:8082/Addmovie > List<Movies> PostMethod not running
+[
+   {    
+    "title" : "Harry Potter",
+    "description" : "This is based on Magical School" ,
+    "duration" : "2021-03-22T02:34:56.123+05:55" ,
+	"language" : "English",
+	"type" : "Fiction , Magic",
+	"image" : "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/original/products/84605/93507/Harry-Potter-and-the-philosophers-stone-original-movie-poster-buy-now-at-starstills__45891.1577476239.jpg?c=2",
+    "rating" : 9.2,
+	"trailer" :"https://www.youtube.com/watch?v=VyHV0BRtdxo"    
+   }  
+]
+  
+[
+  {        
+        "title": "Batman",
+        "description": "This is Super hero Movie",
+        "duration": "2021-03-22T01:34:56.123+05:55",
+        "language": "English",
+        "type": "Action",
+        "image": "https://i.redd.it/vzvgy11qyhy31.png",
+        "rating": 8.9,
+        "trailer": "https://www.youtube.com/watch?v=-FZ-pPFAjYY"
+    }  
+]
+
+
+
+MovieShowController-------------------------
+
+PostMethod
+http://localhost:8082/addshow  > List<ShowData> 
+[
+    {
+		"date": "2021-03-30T02:34:56.123+05:30",
+		"time": "2021-03-01T22:30:00.123+05:30",
+		"price" : 250.00,
+		"screenid":1,
+		"movieid":1
+	}
+]
+
+   
+PostMethod
+http://localhost:8082/Listofdates  > 	MovieDummy   
+  
+  {
+        "movieId": 1,
+        "title": "The Conjuring: The Devil Made Me Do It",
+        "description": "The Devil Made Me Do It reveals a chilling story of terror, murder and unknown evil that shocked even experienced real-life paranormal investigators Ed and Lorraine Warren.",
+        "duration": "01:46:56",
+        "language": "English",
+        "type": "Horror",
+        "rating": 8.8        
+  }
+	
+	
+	
+PostMethod
+http://localhost:8082/getShowsByMovies > Datemovie 
+
+{
+        "date": "2021-03-30",
+   		"movieid":1         
+}
+
+Register Controller---------------------------
+
+PostMethod
+http://localhost:8082/register > user 
+{
+   		"userName":"Anuj",
+        "userPassword" : "1234,
+        "email": "ap@gmail.com",
+        "phone": "987136575"           
+}
+
+PostMethod
+http://localhost:8082/login  > user
+
+{
+        "userId": "",
+   		"userName":"",
+        "userPassword" : "1234",
+        "email": "ap@gmail.com",
+        "phone": ""           
+}
+
+
+SeatController----------------
+
+PostMethod
+http://localhost:8082/listofseats > ShowDummy
+
+{
+        "showId": 1,
+        "startTime": "09:30:00",
+        "screenName": "Screen1",
+        "screenid": 1,
+        "price": 190.0
+        
+}
+
+
+
+PostMethod
+http://localhost:8082/setseat > MySeat
+
+[{
+        "seatId": 3,
+        "seatNumber": 3,
+        "isBooked": false
+}]
+
+
+
+
+TheatreController-----------------
+
+
+PostMethod
+http://localhost:8082/gettheatres	> zipcode > getmethod
+@param("x") 110096(zipcode)
+
+
+
+PostMethod
+http://localhost:8082/addTheatre 
+{
+        "theatrename" : "PVR",
+        "totalscreens" : 2,
+        "zipcode" : 110096
+}
+
+
