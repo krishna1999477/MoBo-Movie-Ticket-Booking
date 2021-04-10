@@ -37,6 +37,7 @@ public class CityController {
 		City.setStaticCity(city.getCityname());
 		
 		System.out.println(City.getStaticCity());
+                System.out.println("hello vasu sir..yeah kool");
 		
 		return city;
 	}
