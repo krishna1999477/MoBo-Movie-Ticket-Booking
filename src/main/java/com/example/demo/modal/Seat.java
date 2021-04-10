@@ -24,14 +24,6 @@ public class Seat
 	@JoinColumn(name= "showid" ,referencedColumnName = "showid")
 	MovieShow movieShow;
 	
-	
-	
-	
-	
-
-	
-	
-	
 	@Override
 	public String toString() {
 		return "Seat [seatId=" + seatId + ", seatNumber=" + seatNumber + ", isBooked=" + isBooked + ", screen=" + screen

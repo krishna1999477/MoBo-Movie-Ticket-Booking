@@ -16,13 +16,12 @@ public class MovieService
 	@Autowired
 	MoviesRepo repo;
 	
-	
-	
 	public List<Movies> addMovie(List<Movies> movies) 
 	{
-		for (Movies movie : movies) {
-			repo.save(movie);
+		for (Movies movie : movies) 
+		{
 			System.out.println(movie);
+			repo.save(movie);			
 		}
 		return  movies;
 	}

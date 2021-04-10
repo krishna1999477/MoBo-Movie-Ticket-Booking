@@ -29,6 +29,7 @@ public class MovieShowController
 	@PostMapping("/addshow")
 	List<ShowData> addMovieShow(@RequestBody List<ShowData> showdata)
 	{				
+		System.out.println(showdata);
 		return showservice.addShow(showdata);
 	}
 		

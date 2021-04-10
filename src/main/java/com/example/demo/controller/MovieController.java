@@ -26,7 +26,7 @@ public class MovieController
 	List<Movies> addMovie(@RequestBody List<Movies> movies)
 	{
 		System.out.println("addMovie fun called");
-//		System.out.println(movies);
+		System.out.println(movies);
 		return movieService.addMovie(movies);
 	}
 	

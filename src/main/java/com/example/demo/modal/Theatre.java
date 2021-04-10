@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 public class Theatre {
 
 	@Id
+	@Column(name = "theatreid")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Integer theatreid;
 	
@@ -25,7 +26,7 @@ public class Theatre {
 
 	@ManyToOne
 	@JoinColumn(name = "zipcode", referencedColumnName = "zipcode")
-	public City city;
+	City city;
 	
 	
 	
@@ -34,81 +35,22 @@ public class Theatre {
 		this.totalScreens = totalScreens;
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-	
 
 	public Integer getTheatreid() {
 		return theatreid;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
 	public void setTheatreid(Integer theatreid) {
 		this.theatreid = theatreid;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 	public City getCity() {
 		return city;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
 	public void setCity(City city) {
 		this.city = city;
 	}
-
-
-
-
-
-
-
-
-
-
-
 
 
 	public String getTheatreName() {
@@ -129,9 +71,6 @@ public class Theatre {
 	public void setTotalScreens(Integer totalScreens) {
 		this.totalScreens = totalScreens;
 	}
-
-
-
 
 	public Theatre() {
 		super();

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ public class CityController {
 	CityService service;
 	
 	
-//	public Integer zcode;
+//	public Integer zipcode;
 	
 	@GetMapping("/city")
 	public List<City> fetchByCityName(String city)
@@ -30,14 +31,12 @@ public class CityController {
 		return this.service.fetchByCityName(city);
 	}
 	
-	@PostMapping("/setcity")
-	public SetCity setCity(SetCity city)
+	@PostMapping("/setcity")//need to check this
+	public SetCity setCity(@RequestBody SetCity city)
 	{
 		System.out.println(city);
-		City.setStaticCity(city.getCityname());
-		
-		System.out.println(City.getStaticCity());
-		
+		City.setStaticCity(city.getCityname());		
+		System.out.println(City.getStaticCity());		
 		return city;
 	}
 	
@@ -49,15 +48,6 @@ public class CityController {
 			return true;
 		}
 		return false;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 	
 }

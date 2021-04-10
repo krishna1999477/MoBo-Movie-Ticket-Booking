@@ -23,13 +23,7 @@ public class City
 	public String cityname;
 	
 	public String state;
-		
-	
-	
-	
-	
-	
-	
+
 	public static String getStaticCity() {
 		return staticCity;
 	}
@@ -64,6 +58,13 @@ public class City
 		this.zipcode = zipcode;
 		this.cityname = cityname;
 		this.state = state;
+	}
+	
+	
+	
+	public City(Integer zipcode) {
+		super();
+		this.zipcode = zipcode;
 	}
 	@Override
 	public String toString() {

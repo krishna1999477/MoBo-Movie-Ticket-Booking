@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -22,14 +23,14 @@ public class TheatreController {
 	
 
 	@GetMapping("/gettheatres")
-	public List<Theatre> fetchByZipcode(Integer zipcode)
+	public List<Theatre> fetchByZipcode(@RequestParam("x") Integer zipcode)
 	{
 		return this.theatreService.fetchByZipcode(zipcode);		
 	}
 	
 	
 	
-	//This will add Theatre , Screens with Static data.
+	//This will add Theatre, Screens with Static data.
 	@PostMapping("/addTheatre")
 	String setTheatre()
 	{
