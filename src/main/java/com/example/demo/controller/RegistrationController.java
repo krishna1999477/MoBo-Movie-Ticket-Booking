@@ -30,8 +30,8 @@ public class RegistrationController
 	public User registerUser(@RequestBody User user)
 	{
 //		System.out.println("Registering... User ID : " + user.getUserName());
-		
-		User userObj= null;
+
+		System.out.println("hello world" );
 		
 		userObj = this.service.saveUser(user);
 		
