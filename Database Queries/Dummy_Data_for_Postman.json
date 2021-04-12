@@ -110,8 +110,7 @@ http://localhost:8082/listofseats > ShowDummy
         "startTime": "09:30:00",
         "screenName": "Screen1",
         "screenid": 1,
-        "price": 190.0
-        
+        "price": 190.0        
 }
 
 
